@@ -1,0 +1,42 @@
+#hero {
+    background-image: url("/assets/img/hero.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 40vh;
+    background-color: rgba(61, 61, 61, 0.643);
+    background-blend-mode: multiply;
+}
+
+#hero h1 {
+    font-weight: normal
+}
+
+h1 {
+    font-family: 'Great Vibes', cursive;
+    font-weight: bold;
+    text-align: center;
+}
+
+ul {
+    list-style-position: inside;
+}
+
+ol { 
+    counter-reset: item;
+    list-style-type: none;
+}
+
+.why-us li { 
+    display: block;
+
+ }
+ 
+ .why-us li:before { 
+    content: counter(item, decimal-leading-zero) " "; 
+    counter-increment: item;
+}
+
+h5 {
+    font-weight: bold;
+}
