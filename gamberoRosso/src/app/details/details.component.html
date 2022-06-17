@@ -1,9 +1,21 @@
-<div class="w-75 text-center">
-    <img class="dish-image" src="{{plate.image}}" alt="picture of {{plate.name}}">
-    <h1>{{plate.name}}</h1>
-    <section>
-        <h2>Allergy info:</h2>
-        <article class="d-flex justify-content-center">
+<div class="detail-view d-flex w-75 mx-auto m-5 border">
+
+    <section class="w-50 bg-light">
+        <img class="dish-image w-100" src="{{plate.image}}" alt="picture of {{plate.name}}">
+        <div class="p-3">
+            <h1>{{plate.name}}</h1>
+            <p>stars</p>
+            <div class="d-flex justify-content-between">
+                <p>{{plate.price | currency}}</p>
+                <button type="button" class="btn btn-light order-now" (click)="addToCart()">Order now</button>
+            </div>
+        </div>
+    </section>
+    <section class="w-50 p-3">
+        <h3>Whats inside:</h3>
+        <p>{{plate.ingredients}}</p>
+        <h3>Allergy info:</h3>
+        <article class="d-flex justify-content-center gap-5">
             <div *ngIf="plate.allergyInfo.includes('gluten')">
                 <img src="/assets/svg/gluten.svg" alt="symbol for gluten, wheat">
                 <p>contains Gluten</p>
@@ -35,14 +47,11 @@
         </article>
     </section>
 
-    <section>
-        <p>{{plate.price | currency}}</p>
-        <button type="button" class="btn btn-light order-now" (click)="addToCart()">Order now</button>
 
-    </section>
+
 
     <!-- <div *ngIf="plate.alert" class="alert alert-success" role="alert">
         A simple success alert—check it out!
       </div> -->
-      
+
 </div>
