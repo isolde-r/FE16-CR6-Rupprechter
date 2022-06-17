@@ -10,7 +10,7 @@
                 <hr class="my-0">
                 <div class="m-3">
                     <button routerLink="/dishes/{{dishIndex}}" type="button" class="btn btn-outline-secondary me-3 detail-btn">Details</button>
-                    <button type="button" class="btn text-light order-btn">Order</button>
+                    <button type="button" class="btn text-light order-btn" (click)="addToCart()">Order</button>
                 </div>
             </ng-template>
 

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Dish, dishes } from '../dishes';
+import { OrderService } from '../order.service';
 
 @Component({
   selector: 'menu',
@@ -8,9 +9,15 @@ import { Dish, dishes } from '../dishes';
 })
 export class MenuComponent implements OnInit {
   plates: Dish[] = dishes;
-  constructor() { }
+  plate: Dish = {} as Dish;
+  constructor(private orderService: OrderService) { }
 
   ngOnInit(): void {
+  }
+
+  addToCart(){
+    this.orderService.addToCart(this.plate);
+    console.log(this.orderService.items)
   }
 
 

@@ -37,8 +37,12 @@
 
     <section>
         <p>{{plate.price | currency}}</p>
-        <button type="button" class="btn btn-light order-now">Order now</button>
+        <button type="button" class="btn btn-light order-now" (click)="addToCart()">Order now</button>
 
     </section>
 
+    <!-- <div *ngIf="plate.alert" class="alert alert-success" role="alert">
+        A simple success alert—check it out!
+      </div> -->
+      
 </div>
