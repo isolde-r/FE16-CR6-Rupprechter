@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
+import { Dish, dishes } from '../dishes';
 
 @Component({
   selector: 'app-details',
@@ -6,10 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./details.component.css']
 })
 export class DetailsComponent implements OnInit {
-
-  constructor() { }
+    plate: Dish = {} as Dish;
+    index: number = 0;
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.route.params.subscribe((params: Params) => {
+      this.index = +params["dishIndex"];
+      this.plate = dishes[this.index];
+    });
+    
+  
+    
   }
 
 }
