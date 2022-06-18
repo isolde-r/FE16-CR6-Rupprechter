@@ -22,7 +22,6 @@ const routes: Routes = [
   {
     path: "cart", component: OrderComponent
   }
-  
 ];
 
 @NgModule({

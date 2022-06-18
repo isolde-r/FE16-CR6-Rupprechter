@@ -3,19 +3,20 @@ h1 {
     font-weight: bold;
 }
 
-button:active {
-    background-color: #95322A;
-   
+button {
+    color: black;
+    --bs-nav-pills-link-active-bg: #95322A;
+    --bs-nav-pills-link-active-color: #fff;
 }
 
 
+/* --------------- media queries --------------- */
 
 /* large */
 @media screen and (max-width: 1199px) {
     #img-rest {
         width: 40vw
     }
-   
 }
 
 /* medium */
@@ -23,10 +24,10 @@ button:active {
     #img-rest {
         width: 100%
     }
+
     .rist-cont {
         width: 75vw
     }
-    
 }
 
 /* small and x-small */

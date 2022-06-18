@@ -4,9 +4,8 @@
         <img class="dish-image w-100" src="{{plate.image}}" alt="picture of {{plate.name}}">
         <div class="p-3">
             <h1>{{plate.name}}</h1>
-            <p>stars</p>
             <div class="d-flex justify-content-between">
-                <p>{{plate.price | currency}}</p>
+                <p class="fs-5">{{plate.price | currency:"EUR"}}</p>
                 <button type="button" class="btn btn-light order-now" (click)="addToCart()">Order now</button>
             </div>
         </div>
@@ -46,12 +45,4 @@
             </div>
         </article>
     </section>
-
-
-
-
-    <!-- <div *ngIf="plate.alert" class="alert alert-success" role="alert">
-        A simple success alert—check it out!
-      </div> -->
-
 </div>

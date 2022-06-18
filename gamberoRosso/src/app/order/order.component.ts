@@ -24,13 +24,9 @@ export class OrderComponent implements OnInit {
   })
 
   onPurchase() {
-    // message
     this.cartItems = this.orderServ.clearCart();
     this.checkOutForm.reset();
   }
-
-
-
 
   ngOnInit(): void {
     this.cartItems = this.orderServ.getElements();

@@ -11,7 +11,6 @@ export class OrderService {
 
   addToCart(element: Dish) {
     this.items.push(element);
-
   }
 
   getElements() {
@@ -29,28 +28,25 @@ export class OrderService {
       total += item.price;
     }
     return total
-    // console.log(total)
   }
-  
-  calcService(){
+
+  calcService() {
     return (this.calcTotalProd() * 0.1);
   }
-  
-  calcTotalSum(){
+
+  calcTotalSum() {
     let totalProdAndServ = this.calcTotalProd() + this.calcService();
     if (totalProdAndServ > 40) {
-      return (totalProdAndServ - totalProdAndServ*0.15);
+      return (totalProdAndServ - totalProdAndServ * 0.15);
     }
     return totalProdAndServ
   }
 
-  calcDiscount(){
+  calcDiscount() {
     let totalProdAndServ = this.calcTotalProd() + this.calcService();
     if (totalProdAndServ > 40) {
-      return (totalProdAndServ*0.15)
+      return (totalProdAndServ * 0.15)
     }
-   
     return 0
   }
-
 }

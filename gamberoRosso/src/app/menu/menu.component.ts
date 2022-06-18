@@ -19,10 +19,6 @@ export class MenuComponent implements OnInit {
   addToCart(x: number){
     console.log(x)
     this.orderService.addToCart(this.plates[x]);
-    // console.log(this.orderService.items)
   }
-
-
-
 }
 

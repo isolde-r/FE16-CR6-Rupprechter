@@ -22,18 +22,18 @@ ul {
     list-style-position: inside;
 }
 
-ol { 
+ol {
     counter-reset: item;
     list-style-type: none;
 }
 
-.why-us li { 
+.why-us li {
     display: block;
 
- }
- 
- .why-us li:before { 
-    content: counter(item, decimal-leading-zero) " "; 
+}
+
+.why-us li:before {
+    content: counter(item, decimal-leading-zero) " ";
     counter-increment: item;
 }
 
@@ -41,12 +41,13 @@ h5 {
     font-weight: bold;
 }
 
+/* --------------- media queries --------------- */
+
 /* large */
 @media screen and (max-width: 1199px) {
     #img-rest {
         width: 40vw
     }
-   
 }
 
 /* medium */
@@ -54,10 +55,10 @@ h5 {
     #img-rest {
         width: 100%
     }
+
     .rist-cont {
         width: 75vw
     }
-    
 }
 
 /* small and x-small */
