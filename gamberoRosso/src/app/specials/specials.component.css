@@ -1,0 +1,37 @@
+h1 {
+    font-family: 'Great Vibes', cursive;
+    font-weight: bold;
+}
+
+button:active {
+    background-color: #95322A;
+   
+}
+
+
+
+/* large */
+@media screen and (max-width: 1199px) {
+    #img-rest {
+        width: 40vw
+    }
+   
+}
+
+/* medium */
+@media screen and (max-width: 991px) {
+    #img-rest {
+        width: 100%
+    }
+    .rist-cont {
+        width: 75vw
+    }
+    
+}
+
+/* small and x-small */
+@media screen and (max-width: 767px) {
+    .specials {
+        width: 95vw
+    }
+}

@@ -10,6 +10,7 @@ import { MenuComponent } from './menu/menu.component';
 import { DetailsComponent } from './details/details.component';
 import { OrderComponent } from './order/order.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SpecialsComponent } from './specials/specials.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     AboutComponent,
     MenuComponent,
     DetailsComponent,
-    OrderComponent
+    OrderComponent,
+    SpecialsComponent
   ],
   imports: [
     BrowserModule,
