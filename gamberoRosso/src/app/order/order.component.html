@@ -25,7 +25,7 @@
         </tbody>
     </table>
 
-    <table class="table table-borderless w-25 border">
+    <table class="table table-borderless w-25 border align-self-start">
         <thead class="table-light border-bottom">
             <tr>
                 <th scope="col" colspan="2">Summary</th>
@@ -58,4 +58,31 @@
         </tbody>
     </table>
 
+</section>
+
+<section class="w-75 mx-auto mt-5">
+    <h1>Order Form</h1>
+    <p>Please fill up the info for the delivery</p>
+    <hr>
+    <form [formGroup]="checkOutForm" (ngSubmit)="onPurchase()" class="d-flex flex-column">
+        <label for="name" class="form-label">
+            Name
+            <input class="form-control" type="text" id="name" formControlName="name">
+        </label>
+        <label for="address" class="form-label">
+            Address
+            <input class="form-control" type="text" id="address" formControlName="address">
+        </label>
+        <label for="phone" class="form-label">
+            Phone
+            <input class="form-control" type="tel" id="phone" minlength="9"
+            required formControlName="phone">
+        </label>
+        <label for="email" class="form-label">
+            Email
+            <input class="form-control" type="email" id="email" minlength="9"
+            required formControlName="email">
+        </label>
+    </form>
+    <button class="btn mt-2 mb-5" type="submit">Purchase</button>
 </section>
