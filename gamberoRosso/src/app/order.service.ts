@@ -7,20 +7,50 @@ import { Dish } from './dishes';
 })
 export class OrderService {
   items: Dish[] = [];
-  
   constructor() { }
 
-addToCart(element: Dish){
-  this.items.push(element);
- 
-}
+  addToCart(element: Dish) {
+    this.items.push(element);
 
-getElements(){
-  return this.items;
-}
+  }
 
-clearCart(){
-  this.items = [];
-  return this.items;
-}
+  getElements() {
+    return this.items;
+  }
+
+  clearCart() {
+    this.items = [];
+    return this.items;
+  }
+
+  calcTotalProd() {
+    let total: number = 0;
+    for (const item of this.items) {
+      total += item.price;
+    }
+    return total
+    // console.log(total)
+  }
+  
+  calcService(){
+    return (this.calcTotalProd() * 0.1);
+  }
+  
+  calcTotalSum(){
+    let totalProdAndServ = this.calcTotalProd() + this.calcService();
+    if (totalProdAndServ > 40) {
+      return (totalProdAndServ - totalProdAndServ*0.15);
+    }
+    return totalProdAndServ
+  }
+
+  calcDiscount(){
+    let totalProdAndServ = this.calcTotalProd() + this.calcService();
+    if (totalProdAndServ > 40) {
+      return (totalProdAndServ*0.15)
+    }
+   
+    return 0
+  }
+
 }

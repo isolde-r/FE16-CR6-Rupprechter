@@ -10,6 +10,10 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class OrderComponent implements OnInit {
   cartItems: Dish[] = [];
+  totalProd: number = 0;
+  totalSum: number = 0;
+  service: number = 0;
+  discount: number = 0;
   constructor(private orderServ: OrderService) { }
 
   checkOutForm = new FormGroup({
@@ -19,14 +23,21 @@ export class OrderComponent implements OnInit {
     email: new FormControl("")
   })
 
-  onPurchase(){
+  onPurchase() {
     // message
     this.cartItems = this.orderServ.clearCart();
     this.checkOutForm.reset();
   }
 
+
+
+
   ngOnInit(): void {
     this.cartItems = this.orderServ.getElements();
+    this.totalProd = this.orderServ.calcTotalProd();
+    this.service = this.orderServ.calcService();
+    this.discount = this.orderServ.calcDiscount();
+    this.totalSum = this.orderServ.calcTotalSum();
   }
 
 }

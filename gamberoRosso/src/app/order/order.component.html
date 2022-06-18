@@ -35,15 +35,15 @@
         <tbody class="p-2">
             <tr>
                 <td scope="row" class="pt-3 pb-0">Products</td>
-                <td class="pt-3 pb-0">dfsdfdf</td>
+                <td class="pt-3 pb-0">{{totalProd | currency}}</td>
             </tr>
             <tr>
                 <td scope="row" class="pt-0">Service</td>
-                <td class="pt-0"></td>
+                <td class="pt-0">{{service | currency}}</td>
             </tr>
             <tr>
                 <td scope="row">Discount</td>
-                <td>dfsdf</td>
+                <td>{{discount | currency}}</td>
             </tr>
             <tr>
                 <td scope="row" colspan="2" class="py-0">
@@ -53,7 +53,7 @@
             </tr>
             <tr class="fw-bold">
                 <td scope="row" class="pt-0 pb-4">Total amount (including VAT)</td>
-                <td class="pt-0 pb-4"></td>
+                <td class="pt-0 pb-4">{{totalSum | currency}}</td>
             </tr>
         </tbody>
     </table>
