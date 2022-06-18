@@ -9,15 +9,17 @@ import { OrderService } from '../order.service';
 })
 export class MenuComponent implements OnInit {
   plates: Dish[] = dishes;
-  plate: Dish = {} as Dish;
-  constructor(private orderService: OrderService) { }
+  constructor(private orderService: OrderService) {
+   
+   }
 
   ngOnInit(): void {
   }
 
-  addToCart(){
-    this.orderService.addToCart(this.plate);
-    console.log(this.orderService.items)
+  addToCart(x: number){
+    console.log(x)
+    this.orderService.addToCart(this.plates[x]);
+    // console.log(this.orderService.items)
   }
 
 

@@ -13,7 +13,7 @@
     </section>
     <section class="w-50 p-3">
         <h3>Whats inside:</h3>
-        <p>{{plate.ingredients}}</p>
+        <p>{{plate.ingredients.join(", ")}}</p>
         <h3>Allergy info:</h3>
         <article class="d-flex justify-content-center gap-5">
             <div *ngIf="plate.allergyInfo.includes('gluten')">
