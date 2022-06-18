@@ -2,17 +2,19 @@
     <div class="position-absolute top-50 start-50 translate-middle">
         <h1 class="fst-italic">Ristorante Il Gambero Rosso</h1>
         <p>Delivering great food for more than 18 years!</p>
-        <button type="button" class="btn btn-success m-2">Our menu</button>
+        <button routerLink="/menu" type="button" class="btn btn-success m-2">Our menu</button>
         <button type="button" class="btn btn-success m-2">Book a table</button>
     </div>
 </section>
 
-<section class="container-fluid mb-5">
+<section class="container-lg mb-5 rist-cont">
     <h1 class="my-5">Ristorante Il Gambero Rosso</h1>
-    <div class="row justify-content-center">
-        <img src="/assets/img/restaurant.jpg" alt="picture of restaurant inside" class="col-4">
-        <div class="col-6">
-            <h3>A unique place to <span class="fw-bold text-uppercase">spend a time out</span> of our busy lives</h3>
+    <div class="mx-auto">
+        <img src="/assets/img/restaurant2.jpg" alt="picture of restaurant inside" class="float-lg-start mb-0 me-3"
+            id="img-rest">
+        <div class="float-none">
+            <h3 class="my-4">A unique place to <span class="fw-bold text-uppercase">spend a time out</span> of our busy
+                lives</h3>
             <p>Enjoy our elegant but at the same time pleasant atmosphere that is so typical for our italian lifestyle.
                 Exquisite materials paired with industrial design elements the dining room looks basic and extremely
                 cosy at the same time. We added our brands shade of "rosso" in a subtile manner, not to overwhelm but
@@ -27,7 +29,7 @@
                 <li>cerimonies like weddings or birthdays</li>
             </ul>
             <p>We like to point out that we see it as our duty to make your time at our place unique and enjoyable. The
-                more we know about your needs, the better we can satisfy them. Please don't hesitate to imform as at any
+                more we know about your needs, the better we can satisfy them. Please don't hesitate to inform as at any
                 time.</p>
         </div>
     </div>
@@ -36,8 +38,8 @@
 <section class="why-us bg-light py-5 my-5">
     <h1>Why choose us</h1>
     <p class="text-center">There are many restaurants out there, what makes us unique?</p>
-    <ol class="d-flex gap-4 mt-5 justify-content-center">
-        <li class="col-3">
+    <ol class="d-flex flex-column flex-lg-row gap-4 mt-5 justify-content-center">
+        <li class="col-12 col-lg-3 pe-4 pe-lg-0">
             <h5>Unite gourmet approach with tradition</h5>
             <p>Our plates are not a clean and formal arrangement of foods, nor an overloaded, well intended portion by
                 an italian granny. We only use high quality ingredients produced in the region by people we know, trying
@@ -45,13 +47,13 @@
                 "secrets" of traditional italian cuisine.</p>
         </li>
 
-        <li class="col-3">
+        <li class="col-12 col-lg-3 pe-4 pe-lg-0">
             <h5>Unique atmosphere</h5>
             <p>We position ourselves in the middle of androgyn style, freezing gourmet temples and crowded, popular
                 restaurants. Our wish is to create a cosy atmosphere without overstepping the limits of other customers
                 well-being.</p>
         </li>
-        <li class="col-3">
+        <li class="col-12 col-lg-3 pe-4 pe-lg-0">
             <h5>We lend an ear to customers with special needs</h5>
             <p>Why should our cuisine be restricted to some people? Do you need a gluten-free menu or are you suffering
                 from other food-allergies like tree nuts, cow's milk or wheat. Just let us know, we can manage that!</p>

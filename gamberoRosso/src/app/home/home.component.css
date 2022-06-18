@@ -40,3 +40,29 @@ ol {
 h5 {
     font-weight: bold;
 }
+
+/* large */
+@media screen and (max-width: 1199px) {
+    #img-rest {
+        width: 40vw
+    }
+   
+}
+
+/* medium */
+@media screen and (max-width: 991px) {
+    #img-rest {
+        width: 100%
+    }
+    .rist-cont {
+        width: 75vw
+    }
+    
+}
+
+/* small and x-small */
+@media screen and (max-width: 767px) {
+    .rist-cont {
+        width: 95vw
+    }
+}
