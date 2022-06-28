@@ -15,7 +15,7 @@ export class DetailsComponent implements OnInit {
 
   addToCart() {
     this.orderService.addToCart(this.plate)
-    console.log(this.orderService.items)
+    window.alert(`${this.plate.name} has been successfully added to your cart.`);
   }
 
   ngOnInit(): void {

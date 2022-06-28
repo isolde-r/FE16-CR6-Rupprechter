@@ -19,6 +19,7 @@ export class MenuComponent implements OnInit {
   addToCart(x: number){
     console.log(x)
     this.orderService.addToCart(this.plates[x]);
+    window.alert(`${this.plates[x].name} has been successfully added to your cart.`);
   }
 }
 
