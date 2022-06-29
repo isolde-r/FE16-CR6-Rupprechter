@@ -21,8 +21,8 @@ export class OrderComponent implements OnInit {
   checkOutForm = new FormGroup({
     name: new FormControl("", Validators.required),
     address: new FormControl("", Validators.required),
-    phone: new FormControl(""),
-    email: new FormControl(""),
+    phone: new FormControl("", Validators.required),
+    email: new FormControl("", Validators.required),
   });
 
 
@@ -34,21 +34,19 @@ export class OrderComponent implements OnInit {
       let items = item.name;
       alertItems.push(items);
     }
-
-
-
-    this.cartItems = this.orderServ.clearCart();
-    this.checkOutForm.reset();
+    
+    let a: any = this.checkOutForm.value;
+    console.log(a)
 
     if (this.checkOutForm.valid) {
-      // window.alert(`Thank you for your order. You purchased the following products:\n${alertItems.join("\n")}.\nThe dishes will be delievered to the following adress:`);
-      var a: any = this.checkOutForm.value;
+      window.alert(`Thank you for your order. You've purchased the following products:\n${alertItems.join("\n")}\nThe dishes will be delievered to the following adress: \n${a.address}`);
 
-      console.log(a)
 
     } else {
       window.alert(`Some of the order data are not correct, please try again.`)
     }
+    this.cartItems = this.orderServ.clearCart();
+    this.checkOutForm.reset();
   }
 
   ngOnInit(): void {
