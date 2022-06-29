@@ -16,31 +16,31 @@
         <h3>Allergy info:</h3>
         <article class="d-flex justify-content-center gap-5">
             <div *ngIf="plate.allergyInfo.includes('gluten')">
-                <img src="/assets/svg/gluten.svg" alt="symbol for gluten, wheat">
+                <img src="./assets/svg/gluten.svg" alt="symbol for gluten, wheat">
                 <p>contains Gluten</p>
                 <input type="radio" id="gluten" name="contains-gluten">
                 <label class="ms-3" for="gluten">order gluten-free version</label>
             </div>
 
             <div *ngIf="plate.allergyInfo.includes('lactose')">
-                <img src="/assets/svg/lactose.svg" alt="symbol for lactose, milk tetra pak">
+                <img src="./assets/svg/lactose.svg" alt="symbol for lactose, milk tetra pak">
                 <p>contains Lactose</p>
                 <input type="radio" id="lactose" name="contains-lactose">
                 <label class="ms-3" for="lactose">order lactose-free version</label>
             </div>
 
             <div *ngIf="plate.allergyInfo.includes('meat')">
-                <img src="/assets/svg/meat.svg" alt="symbol for meat, a cow">
+                <img src="./assets/svg/meat.svg" alt="symbol for meat, a cow">
                 <p>Antibiotic-free Beef</p>
             </div>
 
             <div *ngIf="plate.allergyInfo.includes('fish')">
-                <img src="/assets/svg/fish.svg" alt="symbol for fish">
+                <img src="./assets/svg/fish.svg" alt="symbol for fish">
                 <p>Sustainable fishing</p>
             </div>
 
             <div *ngIf="plate.allergyInfo.includes('vegetarian')">
-                <img src="/assets/svg/vegetarian.svg" alt="symbol for vegetarian, a carrot">
+                <img src="./assets/svg/vegetarian.svg" alt="symbol for vegetarian, a carrot">
                 <p>Vegetarian</p>
             </div>
         </article>
